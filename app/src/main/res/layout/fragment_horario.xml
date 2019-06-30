@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:stretchColumns="*"
+    tools:context=".horario">
+    
+    <TextView
+        android:text="Disponibilidad de aulas"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:layout_weight="1.5"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="Seleccione el pabellon:"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <Spinner
+            android:id="@+id/spn_pabellon2"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:entries="@array/l_pabellones"
+            android:layout_weight="5"
+            android:gravity="center"></Spinner>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1.5"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="Seleccione el aula:"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:id="@+id/spn_aula2"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:entries="@array/l_aulas"
+            android:layout_height="25dp"></Spinner>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tb_horario"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:stretchColumns="*">
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/boton">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hora"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunes"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Martes"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Miercoles"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Jueves"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Viernes"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="9-11"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="11-1"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1-3"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="3-5"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="5-7"
+                android:gravity="center_vertical"
+                android:textSize="17sp"
+                android:padding="7dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_buscar"
+        android:layout_weight="1"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:text="Mostrar Horario"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recicler2"
+        android:layout_weight="4.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></android.support.v7.widget.RecyclerView>
+
+    
+</LinearLayout>

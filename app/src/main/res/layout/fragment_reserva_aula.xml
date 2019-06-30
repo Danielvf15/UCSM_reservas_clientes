@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".reserva_aula">
+
+    <TextView
+        android:text="Reservas de aulas"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1.0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="Selecciona pabellon:"
+            android:textSize="20sp"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:id="@+id/spn_pabellon"
+            android:entries="@array/l_pabellones"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_height="25dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="Selecciona aula:"
+            android:textSize="20sp"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:id="@+id/spn_aula"
+            android:entries="@array/l_aulas"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_height="25dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="Selecciona dia:"
+            android:textSize="20sp"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:id="@+id/spn_dia"
+            android:entries="@array/dias"
+            android:textAlignment="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="25dp"></Spinner>
+    </LinearLayout>
+
+
+    <CalendarView
+        android:visibility="gone"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </CalendarView>
+
+    <TimePicker
+        android:visibility="gone"
+        android:timePickerMode="spinner"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></TimePicker>
+    <Button
+        android:id="@+id/btn_busca_aulas"
+        android:text="Buscar Aulas"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/reciclerId"
+        android:layout_weight="4.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></android.support.v7.widget.RecyclerView>
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/tb_aulas"
+        android:layout_weight="4.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>
+
+
+    <TableLayout
+        android:visibility="gone"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:stretchColumns="*">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Pabellon"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="Aula"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:id="@+id/btn_reservar"
+        android:visibility="gone"
+        android:text="Reservar"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>
